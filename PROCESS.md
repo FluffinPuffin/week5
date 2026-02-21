@@ -20,7 +20,7 @@ Claude Web is easy since there's no setup — it's just a browser tab. Building 
 
 ## Self-Review Patterns
 
-Claude was pretty consistent about catching edge cases. It flagged the whitespace issue and made sure the email validation wasn't too loose. What it didn't catch was something I noticed on my own. The final `script.js` has two `submit` event listeners. One was from an earlier step that just logged to the console, and the other was the updated version that shows the success card. The old one never got removed, so both fire every time you submit. Claude never flagged that. It's better at catching logic problems than it is at noticing leftover code.
+A pattern I noticed was that asking Claude to review its own output often produced a better result than the first response. For example, at one point it gave me a full code replacement when really only one line needed to change to get the same result. After asking it to review, it caught that and gave me just the targeted fix instead. It's better at refining what it already wrote than it is at getting it right the first time.
 
 ## Browser Tool vs. CLI Comparison
 
