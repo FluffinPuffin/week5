@@ -10,7 +10,7 @@ It felt pretty natural. Breaking it into steps made each part feel manageable on
 
 ## What Self-Review Caught
 
-When I asked Claude to review the validation step, it caught that typing only spaces would pass the empty check. For example, hitting the spacebar a few times in the name field would count as a valid name. Adding `.trim()` before the check fixed that. It's a small thing but easy to miss when you're only testing with normal input.
+When I reviewed the HTML structure, I caught that Claude had placed the `<script>` tag at the bottom of the body instead of in the `<head>`. It's a common pattern to put scripts at the bottom so they don't block the page from loading, but the better fix is to keep it in the `<head>` and add `defer`. That way the script loads without blocking anything and still runs after the DOM is ready. The final version has it in the `<head>` with `defer`.
 
 ## Tool Impressions
 
