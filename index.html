@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--https://claude.ai/share/ceddb53b-5dcc-4b48-92d5-5f8f5cbecf38-->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-inner">
+      <span class="header-logo">📬</span>
+      <h1 class="header-title">Contact Us</h1>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main id="main-content">
+    <form id="contact-form" novalidate>
+
+      <!-- Name field -->
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" />
+        <!-- more semantic than span for a block-level error message -->
+        <p class="error-message" id="name-error"></p>
+      </div>
+
+      <!-- Email field -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email" />
+        <!-- more semantic than span for a block-level error message -->
+        <p class="error-message" id="email-error"></p>
+      </div>
+
+      <!-- Message field -->
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Your message" rows="5"></textarea>
+        <!-- more semantic than span for a block-level error message -->
+        <p class="error-message" id="message-error"></p>
+      </div>
+
+      <button type="submit">Send</button>
+
+    </form>
+    <!-- Success message -->
+    <div id="success-output" hidden>
+      <h2>Submitted successfully!</h2>
+      <p><strong>Name:</strong> <span id="output-name"></span></p>
+      <p><strong>Email:</strong> <span id="output-email"></span></p>
+      <p><strong>Message:</strong> <span id="output-message"></span></p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; <span id="footer-year"></span> Contact Form. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
